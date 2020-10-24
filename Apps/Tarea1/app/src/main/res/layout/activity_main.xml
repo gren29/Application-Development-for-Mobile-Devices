@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text=""
+        android:id="@+id/lblnumero"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:id="@+id/lblPrimo"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:id="@+id/lblFibonacci"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:id="@+id/lblMaravilloso"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:text=""
+        android:id="@+id/lblString"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:id="@+id/lblPalindromo"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="right"
+        android:layout_marginRight="20dp"
+        android:textSize="15dp"
+        android:layout_marginTop="50dp"
+        android:text="Raul Sanchez Rico"
+        android:id="@+id/lblDatos"
+        />
+</LinearLayout>
