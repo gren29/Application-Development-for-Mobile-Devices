@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width = "match_parent" 
+    android:layout_height = "match_parent" >
+<EditText
+    android:id = "@+id/xet1" 
+    android:layout_width = "match_parent" 
+    android:layout_height = "wrap_content" 
+    android:layout_centerHorizontal = "true" 
+    android:layout_centerVertical = "true" 
+    android:hint = "Texto de entrada" />
+</RelativeLayout>
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.app.Activity;
+public class MainActivity extends Activity{
+    @Override
+    protected void onCreate(Bundle b) {
+        super.onCreate(b);
+        setContentView(R.layout.activity_main);
+    }
+}
+________________________
+
+<EditText
+    android:id = "@+id/xet1" 
+    android:layout_width = "match_parent" 
+    android:layout_height = "wrap_content" 
+    android:layout_centerHorizontal = "true" 
+    android:layout_centerVertical = "true" 
+    android:hint = "Teléfono"
+    android:inputType = "phone" 
+ />
+<Button
+    android:id = "@+id/xbn1" 
+    android:layout_width = "wrap_content"
+    android:layout_height = "wrap_content"
+    android:layout_below = "@+id/xet1" 
+    android:layout_centerHorizontal = "true" 
+    android:onClick = "verValor" 
+    android:text = "Guardar"
+/>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:id="@+id/xet1"
+    android:inputType="text" 
+    android:hint="Apodo" 
+    android:maxLength="98" 
+    android:layout_alignParentTop="true" 
+    android:layout_centerHorizontal="true"
+   />
+
+   <EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:id="@+id/xet1"
+    android:hint="Nombre:" 
+    android:singleLine="true" 
+    android:layout_centerVertical="true" 
+    android:layout_alignParentRight="true" 
+    android:layout_alignParentEnd="true" 
+  />
+
+<EditText android:id="@+id/xet1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:layout_centerHorizontal="true" 
+    android:layout_centerVertical="true" 
+    android:ems="6"
+    android:hint="Un texto" 
+    android:inputType="text" 
+/>
+
+<EditText
+    android:id="@+id/xet1" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:layout_centerHorizontal="true" 
+    android:layout_centerVertical="true" 
+    android:digits="1234567890 " 
+    android:singleLine="true"
+    android:maxLength="15" 
+    android:inputType="number" 
+    android:ems="9"
+    android:hint="RFC?" 
+/>
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:id="@+id/xet1" 
+    android:enabled="false" 
+    android:hint="Edición deshabilitada" 
+ />
+ <EditText 
+    android:id="@+id/campo_sin_foco" 
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content" 
+    android:focusable="false" 
+    android:hint="Sin foco" 
+ />
+
+ <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    > 
+    <EditText
+        android:id="@+id/xet1" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:hint="con foco al inicio" 
+    />
+    <EditText
+        android:id="@+id/xet2" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:hint="sin foco al inicio"
+    />
+</LinearLayout>
+
+<EditText
+    android:id="@+id/xet1" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="busca el foco" 
+    android:nextFocusRight="@+id/xet2" 
+    android:singleLine="true" 
+  />
+<EditText
+    android:id="@+id/xet2" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Foco 2" 
+    android:nextFocusLeft="@+id/xet1"
+    android:singleLine="true"
+    />
+
+<EditText
+    android:id="@+id/xet1"
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content" 
+    android:text="posicionando el cursor" 
+    android:hint="una posición" 
+    android:singleLine="true" 
+ />
+
+ <?xml version="1.0" encoding="utf-8"?> 
+ <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
+    android:orientation="vertical" 
+    >
+    
+    <EditText
+        android:id="@+id/xet1" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content"
+        android:text="algún texto" 
+        android:hint="selección" 
+        android:singleLine="true" 
+    />
+    </LinearLayout>
+<EditText
+    android:id="@+id/xet1" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:imeOptions="actionSend" 
+    android:imeActionLabel="Enviar" 
+    android:inputType="text" 
+    android:singleLine="true" 
+ />
+
+import android.app.*;
+import android.os.*;
+import android.text.Editable;
+import android.widget.EditText;
+public class MainActivity extends Activity {
+    EditText jet1;
+    Editable jet2;
+    int ini = 0, fin = 0;
+    @Override
+    protected void onCreate(Bundle b) {
+        super.onCreate(b); setContentView(R.layout.activity_main); jet1 = (EditText) findViewById(R.id.xet1); jet2 = jet1.getText();
+        for (int i = ini; i < jet1.length(); i++)
+            if (jet2.charAt(i) == ' ') fin = i;
+        jet1.setSelection(ini, fin); 
+    }
+}
+
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
+    >
+    <EditText
+        android:id="@+id/xet1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" 
+        android:layout_gravity="center_horizontal"
+        android:inputType="textMultiLine" 
+        android:lines="3"
+        android:maxLines="3" 
+    />
+    <TextView
+        android:id="@+id/xtv1"
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:layout_alignEnd="@+id/xet1"
+        android:layout_alignRight="@+id/xet1"
+        android:layout_below="@+id/xet1" 
+        android:text="Small Text" 
+    />
+</RelativeLayout>
+
+<EditText
+    android:id="@+id/xet1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:layout_centerHorizontal="true" 
+    android:layout_centerVertical="true" 
+    android:ems="12" 
+    android:hint="búsqueda" 
+    android:imeOptions="actionSearch" 
+    android:singleLine="true" 
+  />
+
+
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" > 
+    <EditText
+        android:id="@+id/xet1"
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_centerVertical="true" 
+        android:layout_gravity="center_horizontal"
+        android:layout_toEndOf="@+id/xiv1"
+        android:layout_toRightOf="@+id/xiv1"
+        android:inputType="numberDecimal" 
+    />
+    <ImageView
+        android:id="@+id/xiv1" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_alignParentLeft="true" 
+        android:layout_alignParentStart="true" 
+        android:layout_centerVertical="true" 
+        android:layout_marginEnd="24dp" 
+        android:layout_marginRight="24dp" 
+    />
+</RelativeLayout>
+
+<EditText
+    android:id="@+id/xet1"
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp" 
+    android:hint="un color diferente" 
+    android:singleLine="true"
+    android:textColorHint="@color/colorHint" 
+   />
+
+   <EditText
+    android:id="@+id/xet1"
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content" 
+    android:layout_marginBottom="20dp" 
+    android:hint="un color diferente" 
+    android:singleLine="true" 
+    android:textColorHighlight="#123ABC" 
+ />
+
+ <EditText
+    android:id="@+id/xet1" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:layout_marginBottom="20dp" 
+    android:hint="Texto centrado" 
+    android:singleLine="true" 
+    android:gravity="center"
+  />
+
+<style name="miEstilo" parent="Theme.AppCompat.Light">
+    <item name="colorControlNormal">#CD82C7</item>
+    <item name="colorControlActivated">#123ABC</item>
+    <item name="android:textColorHighlight">#D0ADD6</item>
+ </style>
+
+ <EditText
+    android:id="@+id/xet1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="20dp" 
+    android:hint="nuevo color del borde" 
+    android:inputType="textNoSuggestions" 
+    android:singleLine="true" 
+    android:theme="@style/miEstilo" 
+   />
+
+   <EditText
+    android:id="@+id/xet1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="nuevo tamaño de fuente"
+    android:singleLine="true" 
+    android:textSize="34sp" 
+    />
+
+    <AutoCompleteTextView 
+        android:id="@+id/xactv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:hint="autocompletado de palabras "
+        android:completionThreshold="1" 
+        android:singleLine="true" 
+       />
