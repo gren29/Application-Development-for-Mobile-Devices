@@ -9,7 +9,7 @@ public class FiguraCanvas extends Activity {
     public void onCreate(Bundle bn) {
         super.onCreate(bn);
         bn = getIntent().getExtras();
-        f = new Figura((Context)this,bn.getFloat("VOLUMEN"),bn.getSerializable("COORA"), bn.getSerializable("COORB"),bn.getSerializable("COORC"),bn.getSerializable("COORD") );
+        f = new Figura((Context)this,bn.getFloat("DET"),bn.getFloat("VOLUMEN"),bn.getSerializable("COORA"), bn.getSerializable("COORB"),bn.getSerializable("COORC"),bn.getSerializable("COORD") );
         setContentView(f);
     }
 

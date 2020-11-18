@@ -41,9 +41,7 @@ public class Obj {
         this.w[5] = new Point3D(1.0D, 1.0D, 1.0D);
         this.w[6] = new Point3D(-1.0D, 1.0D, 1.0D);
         this.w[7] = new Point3D(-1.0D, -1.0D, 1.0D);
-
         this.objSize = Math.sqrt(12.0D);
-
         this.rho = this.objSize * 5.0D;
     }
 

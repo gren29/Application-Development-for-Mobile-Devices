@@ -20,12 +20,13 @@ public class Figura extends View {
     int n_lados;
     Obj obj;
     float vol;
+    float det;
     ArrayList<Float> coordenadasA =new ArrayList<Float>();
     ArrayList<Float> coordenadasB =new ArrayList<Float>();
     ArrayList<Float> coordenadasC =new ArrayList<Float>();
     ArrayList<Float> coordenadasD =new ArrayList<Float>();
 
-    public Figura(Context c, float volumen, Serializable coorA, Serializable coorB, Serializable coorC, Serializable coorD) {
+    public Figura(Context c,float determinante, float volumen, Serializable coorA, Serializable coorB, Serializable coorC, Serializable coorD) {
         super(c);
         coordenadasA = (ArrayList<Float>) coorA;
         coordenadasB = (ArrayList<Float>) coorB;
@@ -38,7 +39,7 @@ public class Figura extends View {
         this.centerX = 550;
         this.centerY = 700;
         vol = volumen;
-
+        det = determinante;
     }
 
     int iX(double paramDouble) {
@@ -65,13 +66,13 @@ public class Figura extends View {
         int posX = paramCanvas.getWidth();
         int posY = paramCanvas.getHeight();
         p.setColor(Color.BLACK);
-        p.setTextSize(50);
-        paramCanvas.drawText("Volumen : "+ vol,posX/3,(posY/3)*2,p);
-        paramCanvas.drawText("Coordenasa : ",(posX/3),(posY/3)*2+100,p);
-        paramCanvas.drawText("A = (0 , 0 , 0 ) ",(posX/3),(posY/3)*2+180,p);
-        paramCanvas.drawText("B = ( "+ coordenadasB.get(0) +","+coordenadasB.get(1)+" ,"+coordenadasB.get(2)+" ) ",(posX/3),(posY/3)*2+260,p);
-        paramCanvas.drawText("C = ( "+ coordenadasC.get(0) +","+coordenadasC.get(1)+" ,"+coordenadasC.get(2)+" ) ",(posX/3),(posY/3)*2+340,p);
-        paramCanvas.drawText("D = ( "+ coordenadasD.get(0) +","+coordenadasD.get(1)+" ,"+coordenadasD.get(2)+" ) ",(posX/3),(posY/3)*2+420,p);
+        p.setTextSize(60);
+        paramCanvas.drawText("| Vt | : ( "+det+" / 6 ) = " + vol,posX/10,(posY/3)*2,p);
+        paramCanvas.drawText("Coordenadas : ",(posX/10),(posY/3)*2+100,p);
+        paramCanvas.drawText("A = (0 , 0 , 0 ) ",(posX/10)+40,(posY/3)*2+180,p);
+        paramCanvas.drawText("B = ( "+ coordenadasB.get(0) +","+coordenadasB.get(1)+" ,"+coordenadasB.get(2)+" ) ",(posX/10+40),(posY/3)*2+260,p);
+        paramCanvas.drawText("C = ( "+ coordenadasC.get(0) +","+coordenadasC.get(1)+" ,"+coordenadasC.get(2)+" ) ",(posX/10+40),(posY/3)*2+340,p);
+        paramCanvas.drawText("D = ( "+ coordenadasD.get(0) +","+coordenadasD.get(1)+" ,"+coordenadasD.get(2)+" ) ",(posX/10+40),(posY/3)*2+420,p);
         this.maxX = getWidth() - 1;
         int i = getHeight() - 1;
         this.maxY = i;

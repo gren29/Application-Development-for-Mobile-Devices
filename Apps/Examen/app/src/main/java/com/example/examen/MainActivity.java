@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                Intent myIntent = new Intent(MainActivity.this,FiguraCanvas.class);
                Bundle bn = new Bundle();
                bn.putFloat("VOLUMEN",volumen);
+               bn.putFloat("DET",determinante);
                bn.putSerializable("COORA",coordeandaA);
                 bn.putSerializable("COORB",coordeandaB);
                 bn.putSerializable("COORC",coordeandaC);
