@@ -6,10 +6,10 @@ import android.os.Bundle;
 
 public class FiguraCanvas extends Activity {
     Figura f;
-    public void onCreate(Bundle paramBundle) {
-        super.onCreate(paramBundle);
-        paramBundle = getIntent().getExtras();
-        f = new Figura((Context)this, paramBundle.getString("FIGURA"), paramBundle.getInt("LADOS"));
+    public void onCreate(Bundle bn) {
+        super.onCreate(bn);
+        bn = getIntent().getExtras();
+        f = new Figura((Context)this,bn.getFloat("VOLUMEN"),bn.getSerializable("COORA"), bn.getSerializable("COORB"),bn.getSerializable("COORC"),bn.getSerializable("COORD") );
         setContentView(f);
     }
 

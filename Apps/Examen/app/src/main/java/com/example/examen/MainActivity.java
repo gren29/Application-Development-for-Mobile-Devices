@@ -16,12 +16,12 @@ public class MainActivity extends AppCompatActivity {
     EditText lblv2A,lblv2B,lblv2C;
     EditText lblv3A,lblv3B,lblv3C;
 
-    int determinante;
+    float determinante;
     float volumen;
-    ArrayList<Integer> coordeandaA = new ArrayList<Integer>();
-    ArrayList<Integer> coordeandaB = new ArrayList<Integer>();
-    ArrayList<Integer> coordeandaC = new ArrayList<Integer>();
-    ArrayList<Integer> coordeandaD = new ArrayList<Integer>();
+    ArrayList<Float> coordeandaA = new ArrayList<Float>();
+    ArrayList<Float> coordeandaB = new ArrayList<Float>();
+    ArrayList<Float> coordeandaC = new ArrayList<Float>();
+    ArrayList<Float> coordeandaD = new ArrayList<Float>();
     Button btnAceptar;
 
     @Override
@@ -46,23 +46,31 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                determinante = Determinante();
                volumen = determinante / 6;
-               //System.out.println("VOL : " +volumen);
+               Intent myIntent = new Intent(MainActivity.this,FiguraCanvas.class);
+               Bundle bn = new Bundle();
+               bn.putFloat("VOLUMEN",volumen);
+               bn.putSerializable("COORA",coordeandaA);
+                bn.putSerializable("COORB",coordeandaB);
+                bn.putSerializable("COORC",coordeandaC);
+                bn.putSerializable("COORD",coordeandaD);
+               myIntent.putExtras(bn);
+               startActivity(myIntent);
             }
         });
     }
 
-    public int Determinante(){
-        int res = 0;
-        int a11 = Integer.parseInt(lblv1A.getText().toString());
-        int a12 = Integer.parseInt(lblv1B.getText().toString());
-        int a13 = Integer.parseInt(lblv1C.getText().toString());
-        int a21 = Integer.parseInt(lblv2A.getText().toString());
-        int a22 = Integer.parseInt(lblv2B.getText().toString());
-        int a23 = Integer.parseInt(lblv2C.getText().toString());
-        int a31 = Integer.parseInt(lblv3A.getText().toString());
-        int a32 = Integer.parseInt(lblv3B.getText().toString());
-        int a33 = Integer.parseInt(lblv3C.getText().toString());
-        coordeandaA.add(0);coordeandaA.add(0);coordeandaA.add(0);
+    public float Determinante(){
+        float res = 0;
+        float a11 = Float.parseFloat(lblv1A.getText().toString());
+        float a12 = Float.parseFloat(lblv1B.getText().toString());
+        float a13 = Float.parseFloat(lblv1C.getText().toString());
+        float a21 = Float.parseFloat(lblv2A.getText().toString());
+        float a22 = Float.parseFloat(lblv2B.getText().toString());
+        float a23 = Float.parseFloat(lblv2C.getText().toString());
+        float a31 = Float.parseFloat(lblv3A.getText().toString());
+        float a32 = Float.parseFloat(lblv3B.getText().toString());
+        float a33 = Float.parseFloat(lblv3C.getText().toString());
+        coordeandaA.add(0.0F);coordeandaA.add(0.0F);coordeandaA.add(0.0F);
         coordeandaB.add(a11);coordeandaB.add(a12);coordeandaB.add(a13);
         coordeandaC.add(a21);coordeandaC.add(a22);coordeandaC.add(a23);
         coordeandaD.add(a31);coordeandaD.add(a32);coordeandaD.add(a33);

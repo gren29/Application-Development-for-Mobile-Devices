@@ -1,6 +1,8 @@
 package com.example.examen;
 
 
+import java.util.ArrayList;
+
 public class Obj {
     double rho, theta=0.3F, phi=1.3F, d, objSize, v11, v12, v13, v21, v22, v23, v32, v33, v43; // elementos de la matriz V
     double angulo;
@@ -9,7 +11,7 @@ public class Obj {
     Point3D[] w;
     Point2D[] vScr;
 
-    Obj(String paramString, int paramInt) {
+    Obj(String paramString, int paramInt, ArrayList<Float> coorA,ArrayList<Float>coorB,ArrayList<Float>coorC,ArrayList<Float>coorD) {
         this.n_lados = paramInt;
         this.figura = paramString;
         double d = paramInt;
@@ -19,15 +21,15 @@ public class Obj {
         double a1 = 0.0D;
         double a2 = 0.0D;
         double a3 = 0.0D;
-        double d1 = 1.0D;
-        double d2 = 0.86D;
-        double d3 = 1.0D;
-        double b1 = 1.0D;
-        double b2 = 1.51D;
-        double b3 = 0.74D;
-        double c1 = 0.38D;
-        double c2 = 1.13D;
-        double c3 = 1.178D;
+        double d1 = coorD.get(0);
+        double d2 = coorD.get(1);
+        double d3 = coorD.get(2);
+        double b1 = coorB.get(0);
+        double b2 = coorB.get(1);
+        double b3 = coorB.get(2);
+        double c1 = coorC.get(0);
+        double c2 = coorC.get(1);
+        double c3 = coorC.get(2);
         Point3D[] arrayOfPoint3D = new Point3D[8];
         this.w = arrayOfPoint3D;
         this.vScr = new Point2D[8];
