@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MapsActivity" />
+    tools:context=".MapsActivity">
+<Button
+    android:id="@+id/BtnSatelite"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:contentDescription="Satélite"
+    android:background="@color/colorAccent"
+    android:text="Satélite"
+    android:textColor="#FFFFFF"/>
+<Button
+    android:id="@+id/BtnCentrar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:contentDescription="Centrar"
+    android:text="Centrar"
+    android:background="@color/colorAccent"
+    android:textColor="#FFFFFF"
+    android:translationX="100dp" />
+<Button
+    android:id="@+id/BtnMover"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:text="Mover"
+    android:background="@color/colorAccent"
+    android:textColor="#FFFFFF"
+    android:translationX="200dp" />
+<Button
+    android:id="@+id/BtnAnimar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:background="@color/colorAccent"
+    android:textColor="#FFFFFF"
+    android:text="Animar"
+    android:translationX="300dp" />
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+</RelativeLayout>
