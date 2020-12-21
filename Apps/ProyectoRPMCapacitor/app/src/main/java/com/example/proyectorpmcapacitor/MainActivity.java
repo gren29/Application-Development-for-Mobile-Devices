@@ -2,6 +2,10 @@ package com.example.proyectorpmcapacitor;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
@@ -28,9 +32,10 @@ public class MainActivity extends AppCompatActivity {
     TextView lblCapacitor;
     TextView lblRPM;
     ImageView imgRPM;
-    String resC="";
-    String resRPM="";
+    String resC = "";
+    String resRPM = "";
     int state = 0;
+    ObjectAnimator animatorR;
     ArrayList<Character> resList = new ArrayList<Character>();
 
     Handler bluetoothIn;
@@ -57,24 +62,24 @@ public class MainActivity extends AppCompatActivity {
                     //System.out.println(res);
 
                     if(res == 'A'){
-                        System.out.println("Empieza RPM");
+                        //System.out.println("Empieza RPM");
                         state = 1;
                     }
 
                     if(state == 1){
-                        System.out.println("1  "+res);
+                        //System.out.println("1  "+res);
                         resRPM += String.valueOf(res);
                     }
                     else{
-                        System.out.println("2  "+res);
+                        //System.out.println("2  "+res);
                         resC += String.valueOf(res);
                     }
                     if(res == '-'){
-                        System.out.println("RESPUESTAS");
-                        System.out.println(resC);
-                        System.out.println(resRPM);
-                        lblCapacitor.setText(resC);
-                        lblRPM.setText(resRPM);
+                        //System.out.println("RESPUESTAS");
+                        //System.out.println(resC);
+                        //System.out.println(resRPM);
+                        lblCapacitor.setText("Capacitor : " + resC);
+                        lblRPM.setText("RPMs : "+resRPM);
                         resC = "";
                         resRPM = "";
                         state = 0;
@@ -91,6 +96,9 @@ public class MainActivity extends AppCompatActivity {
         lblCapacitor = (TextView)findViewById(R.id.lblCpacitorResultado);
         lblRPM = (TextView)findViewById(R.id.lblRPMResultado);
         imgRPM = (ImageView)findViewById(R.id.imgRPM);
+
+        animacion();
+
 
     }
 
@@ -204,5 +212,29 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private  void animacion(){
+        animatorR =  ObjectAnimator.ofFloat(imgRPM, "rotation",0f, 360f);
+        animatorR.setDuration(500);
+        AnimatorSet animatorSetRotator = new AnimatorSet();
+        animatorSetRotator.playTogether(animatorR);
+        animatorSetRotator.addListener(new AnimatorListenerAdapter() {
+            private boolean canceled = false;
+            @Override
+            public void onAnimationCancel(Animator animation) {
+                canceled = true;
+            }
+
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                animation.start();
+            }
+
+            @Override
+            public void onAnimationStart(Animator animation) {
+                canceled = false;
+            }
+        });
+        animatorSetRotator.start();
+    }
 
 }
