@@ -158,7 +158,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public  double angulo(Point uno,Point dos,Point tres){
-
             Point pi=new Point(dos.x-uno.x,dos.y-uno.y);
             Point pj=new Point(tres.x-uno.x,tres.y-uno.y);
 
