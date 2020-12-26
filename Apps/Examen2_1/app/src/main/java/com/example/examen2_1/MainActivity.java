@@ -158,14 +158,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
         public  double angulo(Point uno,Point dos,Point tres){
-            Point pi=new Point(dos.x-uno.x,dos.y-uno.y);
-            Point pj=new Point(tres.x-uno.x,tres.y-uno.y);
+            Point pi = new Point(dos.x-uno.x,dos.y-uno.y);
+            Point pj = new Point(tres.x-uno.x,tres.y-uno.y);
 
-            double ang_pi=Math.atan2((double)pi.x,(double)pi.y);
-            double ang_pj=Math.atan2((double)pj.x,(double)pj.y);
-            double ang=ang_pj-ang_pi;
-
-            return Math.toDegrees(ang);
+            double ang_pi = Math.atan2((double)pi.x,(double)pi.y);
+            double ang_pj = Math.atan2((double)pj.x,(double)pj.y);
+            double ang = Math.toDegrees(ang_pj-ang_pi);
+            System.out.println("ANGULO ENTRADA : "+ang);
+            if(ang < 0)ang *= -1;
+            if(ang > 180)ang -= 180;
+            System.out.println("ANGULO SALIDA : "+ang);
+            return (ang);
         }
 
         public float Magnitud(Point v0,Point v1){
