@@ -1,18 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F1F6F9"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/hello"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"></TextView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/cuerdaD"
+                android:layout_width="65dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="55dp"
+                android:background="#9BA4B4"
+                android:text="@string/d"
+                android:textSize="24sp"></Button>
+
+            <Button
+                android:id="@+id/cuerdaA"
+                android:layout_width="65dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:background="#9BA4B4"
+                android:text="@string/a"
+                android:textSize="24sp"></Button>
+
+            <Button
+                android:id="@+id/cuerdaE1"
+                android:layout_width="65dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:background="#9BA4B4"
+                android:text="@string/e1"
+                android:textSize="24sp"></Button>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="200dp"
+            android:layout_height="550dp"
+            android:layout_gravity="bottom"
+            android:scaleType="fitXY"
+            android:src="@drawable/guitarra" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/cuerdaG"
+                android:layout_width="65dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="55dp"
+                android:background="#9BA4B4"
+                android:text="@string/g"
+                android:textColor="#14274E"
+                android:textSize="24sp"></Button>
+
+            <Button
+                android:id="@+id/cuerdaB"
+                android:layout_width="65dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:background="#9BA4B4"
+                android:text="@string/b"
+                android:textSize="24sp"></Button>
+
+            <Button
+                android:id="@+id/cuerdaE2"
+                android:layout_width="65dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:background="#9BA4B4"
+                android:text="@string/e2"
+                android:textSize="24sp"></Button>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Cuerda"
+        android:textColor="@color/textColor"
+        android:textSize="20dp"
+        android:textStyle="bold"></TextView>
+
+    <Button
+        android:id="@+id/salir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:text="@string/salir"></Button>
+
+</LinearLayout>
